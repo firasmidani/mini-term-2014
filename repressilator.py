@@ -2,7 +2,10 @@
 import numpy as np
 
 import matplotlib
-matplotlib.use('TkAgg')
+
+import platform
+if 'Darwin' in platform.platform():  # on OSX
+    matplotlib.use('TkAgg')
 import pylab
 from matplotlib import pyplot as plt, lines, image
 from matplotlib.widgets import Slider, Button, RadioButtons, MultiCursor
